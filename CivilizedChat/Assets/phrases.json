@@ -1,0 +1,40 @@
+{
+  "Phrases": [
+    {
+      "Type": "Start",
+      "Value": "I do say,"
+    },
+    {
+      "Type": "Start",
+      "Value": "Verily,"
+    },
+    {
+      "Type": "Start",
+      "Value": "Indubitably,"
+    },
+    {
+      "Type": "Start",
+      "Value": "Tally-ho,"
+    },
+    {
+      "Type": "Start",
+      "Value": "By Jove,"
+    },
+    {
+      "Type": "End",
+      "Value": "Quite so, quite so."
+    },
+    {
+      "Type": "End",
+      "Value": "Pip pip."
+    },
+    {
+      "Type": "End",
+      "Value": "Jolly good show!"
+    },
+    {
+      "Type": "End",
+      "Value": "Capital."
+    }
+  ]
+}
