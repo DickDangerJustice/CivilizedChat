@@ -1,9 +1,9 @@
-﻿using CivilizedConversation.Services.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
+using CivilizedConversation.Services.Models;
 
 namespace CivilizedConversation.Services
 {
@@ -43,7 +43,7 @@ namespace CivilizedConversation.Services
                     var outputs = values[1].Split(';');
                     foreach (var input in inputs)
                     {
-                        target.Add(input, outputs);
+                        target.Add(input.ToLower(), outputs);
                     }
                 }
             }
@@ -65,7 +65,7 @@ namespace CivilizedConversation.Services
             // replace full text if it matches a replacement string
             if (Replacements.ContainsKey(text.ToLower()))
             {
-                var choices = Replacements[text];
+                var choices = Replacements[text.ToLower()];
                 selectionIndex = Random.Next(0, choices.Length);
                 return choices[selectionIndex];
             }
@@ -73,7 +73,7 @@ namespace CivilizedConversation.Services
             // apply dictionary
             foreach (var entry in Dictionary)
             {
-                var matches = Regex.Matches(text, $@"\b{entry.Key}\b");
+                var matches = Regex.Matches(text.ToLower(), $@"\b{entry.Key}\b");
                 foreach (Match match in matches)
                 {
                     var phrase = match.Value;
